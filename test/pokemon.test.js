@@ -11,3 +11,9 @@ Test(`startsWith()`, async t => {
   console.log(response);
   t.truthy(response instanceof Array);
 });
+
+Test(`endsWith()`, async t => {
+  const response = await Pokemon.endsWith('om');
+  console.log(response);
+  t.truthy(response instanceof Array);
+});

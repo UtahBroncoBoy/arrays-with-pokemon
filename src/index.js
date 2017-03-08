@@ -17,7 +17,7 @@ export default {
    */
   async startsWith(name) {
     const pokemons = await this.all();
-    return pokemons.filter(pokemon => pokemon.name.startsWith(name));
+    return pokemons.filter(pokemon => pokemon.name.startsWith(name.toLowerCase()));
   },
 
   /**
@@ -28,7 +28,7 @@ export default {
    * @returns {Promise.<void>}
    */
   async endsWith(name) {
-
-    // Do your stuff
+    const pokemons = await this.all();
+    return pokemons.filter(pokemon => pokemon.name.endsWith(name.toLowerCase()));
   }
 }
